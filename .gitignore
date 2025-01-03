@@ -1,0 +1,50 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.build/
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Poetry specific
+poetry.lock
+
+# Pytest cache
+.pytest_cache/
+.cache/
+
+# Jupyter Notebook
+*.ipynb
+.ipynb_checkpoints
+
+# VS Code files
+.vscode/
+*.code-workspace
+
+# PyCharm files
+.idea/
+
+# Local environment variables
+.env
+*.env
+
+# Logs and databases
+*.log
+*.sqlite3
+
+# System files
+.DS_Store
+Thumbs.db

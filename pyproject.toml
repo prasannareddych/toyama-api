@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "toyama"
+version = "0.1.0"
+description = "API wrapper for Toyama Switch Controlls"
+authors = ["Prasanna Reddy <prasannareddy_ch@outlook.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.12,<3.14"
+aiohttp = "^3.11.11"
+loguru = "^0.7.3"
+zeroconf = "^0.136.2"
+
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.5"
+mypy = "^1.14.1"
+pytest = "^8.3.4"
+homeassistant = "^2024.12.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
