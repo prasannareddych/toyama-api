@@ -64,19 +64,19 @@ class GatewayDevice(Device):
             return True
         return await self.gateway_handler.update_device_state(self, new_state)
 
-    async def on(self) -> None:
+    async def on(self) -> bool:
         """
         Turn the device on. If the device is a fan, sets speed to maximum.
         """
-        await self.update_state(100 if self.is_fan else 1)
+        return await self.update_state(100 if self.is_fan else 1)
 
-    async def off(self) -> None:
+    async def off(self) -> bool:
         """
         Turn the device off.
         """
-        await self.update_state(0)
+        return await self.update_state(0)
 
-    async def set_speed(self, value: int) -> None:
+    async def set_speed(self, value: int) -> bool:
         """
         Set the speed of the device, if it's a fan.
 
@@ -89,7 +89,7 @@ class GatewayDevice(Device):
         if self.is_fan:
             if value not in SPEED_MAP.keys():
                 raise ValueError(f"Invalid value: {value}")
-            await self.update_state(SPEED_MAP[value])
+            return await self.update_state(SPEED_MAP[value])
 
 
 class GatewayHandler:

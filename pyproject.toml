@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "toyama_api"
-version = "0.1.1"
+version = "0.1.2"
 description = "API wrapper for Toyama Switch Controlls"
 authors = ["Prasanna Reddy <prasannareddy_ch@outlook.com>"]
 readme = "README.md"
